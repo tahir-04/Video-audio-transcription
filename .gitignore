@@ -1,18 +1,15 @@
 # Python
-backend/venv/
+venv/
+.venv/
 __pycache__/
 *.pyc
 
-# Uploads and outputs
-backend/uploads/
-backend/outputs/
+# Environment
+.env
+
+# Uploads
+uploads/
+outputs/
 
 # Node
 frontend/node_modules/
-
-# Environment files
-.env
-
-# OS
-.DS_Store
-Thumbs.db
