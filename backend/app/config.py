@@ -3,7 +3,7 @@ from pathlib import Path
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-
+PROCESSED_AUDIO_FOLDER = "processed_audio"
 
 class Settings(BaseSettings):
     APP_NAME: str
@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     DEBUG: bool
 
     UPLOAD_FOLDER: str = "uploads"
-    OUTPUT_FOLDER: str = "outputs"
+    OUTPUT_FOLDER: str = "outputs"  
 
 
     MAX_UPLOAD_SIZE: int = 200 * 1024 * 1024

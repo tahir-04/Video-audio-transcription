@@ -9,6 +9,8 @@ from app.constants import (
     ALLOWED_VIDEO_EXTENSIONS,
 )
 
+from app.services.extractor import AudioExtractor
+
 router = APIRouter(
     prefix="/upload",
     tags=["Upload"]
@@ -44,7 +46,8 @@ async def upload_audio(
             status_code=500,
             detail=str(e)
         )
-
+    
+extractor = AudioExtractor()
 
 @router.post("/video")
 async def upload_video(
